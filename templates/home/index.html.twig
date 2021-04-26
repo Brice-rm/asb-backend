@@ -45,54 +45,33 @@
 </section>
 <!--  End Présentation -->
 <!--  Services -->
+
+
+
+
 <section class="services" id="services">
     <h2>Services</h2>
-    <hr>
+    <hr>    
     <div class="carousel-wrap">
         <div class="owl-carousel">
+            {% for service in services %}
             <div class="container">
-                <img src="img/renouv.jpg">
+                <img src="/img/{{ service.image }}">
                 <div class="block-text overed">
-                    <h3>Energies renouvelables</h3>
+                     <h3><!--Energies renouvelables--> {{ service.titre }}</h3> 
                     <hr class="hr-services">
-                    <p>- Collecte d'information <br>
+                    <p><!--  - Collecte d'information <br>
                         - Etude des données <br>
-                        - Bilan de votre installation existante</p>
+                        - Bilan de votre installation existante-->
+                        {{ service.description }}
+                    </p> 
                 </div>
             </div>
-            <div class="container">
-                <img src="img/concep.jpg">
-                <div class="block-text overed">
-                    <h3>Conception réseaux électriques</h3>
-                    <hr class="hr-services">
-                    <p>- Etablissement d'un diagnostic <br>
-                        - Respect du cahier des charges bureau d'études <br>
-                        - Certificat de mise en conformité</p>
-                </div>
-            </div>
-            <div class="container">
-                <img src="img/reno.jpg">
-                <div class="block-text overed">
-                    <h3>Rénovation installation électrique</h3>
-                    <hr class="hr-services">
-                    <p>- Etablissement d'un diagnostic de votre installation<br>
-                        - Rénovation complète de votre installation électrique<br>
-                        - Conseils sur la remise aux normes standards attendus</p>
-                </div>
-            </div>
-            <div class="container">
-                <img src="img/autre.jpg">
-                <div class="block-text overed">
-                    <h3>Etude personnalisée tous projets</h3>
-                    <hr class="hr-services">
-                    <p>Quelque soit votre besoin, votre demande, contactez-nous. <br><br>
-                        Ensemble nous étudierons votre projet afin de vous apporter une solution simple et sur-mesure.
-                    </p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
+
 <!--  End Services -->
 <!--  Métier -->
 <section class="metier" id="metiers">
@@ -115,34 +94,15 @@
     <hr>
     <div class="carousel-wrap">
         <div class="owl-carousel">
+            {% for realisation in realisations %}
             <div class="container">
-                <img src="img/realisation/cuisine.jpg">
+                <img src="/img/{{ realisation.image }}">
                 <div class="block-text opacity">
-                    <h3>Cuisine</h3>
-                    <p>Type de client</p>
+                    <h3>{{ realisation.titre }}</h3>
+                    <p>{{ realisation.Soustitre }}</p>
                 </div>
             </div>
-            <div class="container">
-                <img src="img/realisation/douche.jpg">
-                <div class="block-text opacity">
-                    <h3>Douche</h3>
-                    <p>Type de client</p>
-                </div>
-            </div>
-            <div class="container">
-                <img src="img/realisation/hangar.jpg">
-                <div class="block-text opacity">
-                    <h3>Hangar</h3>
-                    <p>Type de client</p>
-                </div>
-            </div>
-            <div class="container">
-                <img src="img/realisation/stand.jpg">
-                <div class="block-text opacity">
-                    <h3>Stand</h3>
-                    <p>Type de client</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
