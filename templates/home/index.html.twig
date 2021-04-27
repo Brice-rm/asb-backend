@@ -185,13 +185,8 @@
 <section class="contact" id="contacts">
     <h2>Contact</h2>
     <hr>
-    <div class="contact-form">
-        <input type="text" name="name" id="name" required placeholder="Votre nom">
-        <input type="text" name="firstname" id="firstname" required placeholder="Votre prénom">
-        <input type="phone" name="phone" id="phone" required placeholder="Votre téléphone">
-        <input type="email" name="email" id="email" required placeholder="Votre mail">
-        <input type="textarea" name="name" id="description" required placeholder="Votre message">
-        <input type="button" value="Envoyez" id="submit">
+    <div class="contact-form d-flex justify-content-center p-3">
+        {{ form(form_cont) }}
     </div>
 </section>
 <!--  End Contacts -->
