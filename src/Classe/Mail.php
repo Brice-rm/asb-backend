@@ -24,8 +24,8 @@ class Mail {
                     ],
                     'To' => [
                         [
-                            'Email' => $to_email,
-                            'Name' => $to_name
+                            'Email' => $to_email, // boite mail qui recois les messages
+                            'Name' => $to_name 
                         ]
                     ],
                     'TemplateID' => 2839446, // id de mon template créé sur le site mailjet

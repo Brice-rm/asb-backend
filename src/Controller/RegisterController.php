@@ -27,9 +27,9 @@ class RegisterController extends AbstractController
     public function index(Request $request, UserPasswordEncoderInterface $encoder): Response
     {
         $user = new User(); // j'appelle ma classe user
-        $form = $this->createForm(RegisterType::class, $user); //j'appelle mon formulaire
+        $form = $this->createForm(RegisterType::class, $user); //j'appelle mon formulaire ou j'y inject mon Style et mes data
 
-        $form->handleRequest($request); // Analyse la requette de l'utilisateur
+        $form->handleRequest($request); // Recupère la requette de l'utilisateur
 
         if($form->isSubmitted() && $form->isValid()){ // verifie que mon formulaire est été soumis et si il est valide
 
@@ -45,7 +45,7 @@ class RegisterController extends AbstractController
 
 
         return $this->render('register/index.html.twig',[
-            'form' => $form->createView()
+            'form' => $form->createView() // creer la vue de mon form
         ]);
     }
 }

@@ -24,7 +24,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('ASB', "{{ path('home') }}");
+            ->setTitle('ASB');
     }
 
     public function configureMenuItems(): iterable
